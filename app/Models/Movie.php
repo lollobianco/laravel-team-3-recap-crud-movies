@@ -18,4 +18,7 @@ class Movie extends Model
 
 
      ];
-}
+    
+
+     public $timestamps = false;
+    }

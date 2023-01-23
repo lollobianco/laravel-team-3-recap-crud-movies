@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Movie;
 use Illuminate\Http\Request;
 
 class MovieController extends Controller
@@ -23,7 +24,7 @@ class MovieController extends Controller
      */
     public function create()
     {
-        //
+        return view('movies.create');
     }
 
     /**
@@ -34,7 +35,16 @@ class MovieController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        $data = $request->all();
+
+        $new_record = new Movie();
+        $new_record->fill($data);
+        $new_record->save();
+
+
+        return redirect()->route('home');
+
     }
 
     /**
