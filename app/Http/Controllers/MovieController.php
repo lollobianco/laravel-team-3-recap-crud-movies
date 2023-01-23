@@ -35,7 +35,7 @@ class MovieController extends Controller
      */
     public function store(Request $request)
     {
-        
+
         $data = $request->all();
 
         $new_record = new Movie();
@@ -66,7 +66,8 @@ class MovieController extends Controller
      */
     public function edit($id)
     {
-        //
+      $movies_edit = Movie::findOrFail($id);
+       return view();
     }
 
     /**
