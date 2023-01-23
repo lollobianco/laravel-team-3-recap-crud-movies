@@ -12,9 +12,11 @@
 </head>
 <body>
   
-  <div class="container">
+  <div class="container p-5">
+    
+    <a href="{{route('home')}}"><button type="submit" class="btn btn-warning">HOME</button></a>
 
-  <form method="POST" action="{{route('movies.store')}}">
+  <form method="POST" class="mt-5" action="{{route('movies.store')}}">
     @csrf
 
 
